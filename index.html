@@ -12,7 +12,7 @@
     <script src="js/moment.min.js"></script>
     <script src="js/format-google-calendar.js"></script>
     <script>
-      var startDate = moment().startOf('week');
+      var startDate = moment().startOf('week').format();
       console.log(startDate);
       
       formatGoogleCalendar.init({

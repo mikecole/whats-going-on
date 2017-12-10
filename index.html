@@ -12,9 +12,6 @@
     <script src="js/moment.min.js"></script>
     <script src="js/format-google-calendar.js"></script>
     <script>
-      var startDate = moment().startOf('week').format();
-      console.log(startDate);
-      
       formatGoogleCalendar.init({
         calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/5to82bi95nvojvjog39amuabng@group.calendar.google.com/events?key=AIzaSyD4ZhRoJdQTiRCQIL-MDfk0j_1nFC3AKXo',
         past: false,
@@ -26,8 +23,8 @@
         upcomingSelector: '#events-upcoming',
         upcomingHeading: '<h2>Upcoming events</h2>',
         format: ['*date*', ': ', '*summary*', ' &mdash; ', '*description*', ' in ', '*location*'],
-        timeMin: '2016-06-03T10:00:00-07:00',
-        timeMax: '2020-06-03T10:00:00-07:00'
+        timeMin: moment().startOf('week').format(),
+        timeMax: moment().endOf('week').format()
       });
     </script>
   </body>

@@ -25,7 +25,7 @@
         recurringEvents: true,
         itemsTagName: 'li',
         upcomingSelector: '#events-upcoming',
-        upcomingHeading: '<h2>Upcoming events</h2>',
+        upcomingHeading: `<h2>This Week ${startDate} - $(endDate)</h2>`,
         format: ['*date*', ': ', '*summary*', ' &mdash; ', '*description*', ' in ', '*location*'],
         timeMin: startDate,
         timeMax: endDate

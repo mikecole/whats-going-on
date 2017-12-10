@@ -48,15 +48,7 @@ window.formatGoogleCalendar = function () {
         }
 
         for (i in result) {
-
-            if (isPast(result[i].end.dateTime || result[i].end.date)) {
-                if (pastCounter < settings.pastTopN) {
-                    pastResult.push(result[i]);
-                    pastCounter++;
-                }
-            } else {
-                upcomingResultTemp.push(result[i]);
-            }
+            upcomingResultTemp.push(result[i]);
         }
 
         upcomingResultTemp.reverse();
